@@ -79,8 +79,12 @@
 
             control_paddle(paddle1,game.input.y);
 
-            game.physics.arcade.collide(paddle1,ball);
-            game.physics.arcade.collide(paddle2,ball);
+            game.physics.arcade.collide(paddle1,ball, function(){
+                game.sound.play('hit_1');
+            });
+            game.physics.arcade.collide(paddle2,ball, function(){
+                game.sound.play('hit_2');
+            });
             
             if(ball.body.blocked.left){
                 score2 += 1;
