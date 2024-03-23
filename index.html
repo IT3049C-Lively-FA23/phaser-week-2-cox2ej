@@ -45,6 +45,16 @@
         function update(){
 
             control_paddle(paddle1,game.input.y);
+
+            game.physics.arcade.collide(paddle1,ball);
+            game.physics.arcade.collide(paddle2,ball);
+            
+            if(ball.body.blocked.left){
+                console.log('Player 2 Scores!');
+            }
+            else if(ball.body.blocked.Right){
+                console.log('Player 1 Scores!');
+            }
         }
 
         function create_paddle(x,y) {
