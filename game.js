@@ -22,7 +22,11 @@ const game = new Phaser.Game(800,600, Phaser.AUTO, '', {
         ground.scale.setTo(2,2)
         ground.body.immovable
 
-        
+        let ledge = platforms.create(400,450,'ground')
+        ledge.body.immovable = true
+
+        ledge = platforms.create(-75, 350, 'ground')
+        ledge.body.immovable = true
     }
     function update(){
 
