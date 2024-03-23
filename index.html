@@ -38,6 +38,9 @@
             game.load.image('ball','assets/ball.png');
 
             game.load.bitmapFont('font','assets/font.png','assets/font.xml');
+
+            game.load.audio('hit_1',['assets/hit_1.ogg','assets/hit_1.wav']);
+            game.load.audio('hit_2',['assets/hit_2.ogg','assets/hit_2.wav']);
         }
         function create(){
             paddle1 = create_paddle(0,game.world.centerY);
