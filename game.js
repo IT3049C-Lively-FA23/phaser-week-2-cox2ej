@@ -27,6 +27,9 @@ const game = new Phaser.Game(800,600, Phaser.AUTO, '', {
 
         ledge = platforms.create(-75, 350, 'ground')
         ledge.body.immovable = true
+
+        player = game.add.sprite(32, game.world.height - 150, 'woof')
+        game.physics.arcade.enable(player)
     }
     function update(){
 
